@@ -20,7 +20,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Dar permisos a Gradle
-        run: chmod +x gradlew
+        run: |
+          chmod +x gradlew
+          chmod +x gradle/wrapper/gradle-wrapper.jar
 
       - name: Compilar APK debug
         run: ./gradlew assembleDebug
